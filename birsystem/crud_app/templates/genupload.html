@@ -155,19 +155,24 @@
                     <tr>
                         <td>{{employee.id}}</td>
                         <td>{{employee.last_name}}</td>
-                        <td>{{employee.EmpGender}}</td>
-                        <td>{{employee.EmpEmail}}</td>
-                        <td>{{employee.EmpDesignation}}</td>
-                        <td>{{employee.EmpDesignation}}</td>
-                        <td>{{employee.EmpDesignation}}</td>
-                        <td>{{employee.EmpDesignation}}</td>
-                        <td>{{employee.EmpDesignation}}</td>
+                        <td>{{employee.first_name}}</td>
+                        <td>{{employee.middle_name}}</td>
+                        <td>{{employee.name_of_doctor}}</td>
+                        <td>{{employee.tin_no}}</td>
+                        <td>{{employee.hospital_name}}</td>
+                        <td>{{employee.mobile_no}}</td>
+                        <td>{{employee.email_address}}</td>
 
                         <td>
+                        <a href="{% url 'edit-emp %'}" type="submit" class="btn btn-primary"> <i class="fas fa-pencil-alt"></i></button>
+                        <a href="{% url 'delete-emp %'}" type="submit" class="btn btn-danger"> <i class="fas fa-trash-alt"></i></button>
+                        </td>
+                        
+                        <!-- <td>
                             <a href="/edit/{{employee.pk}}">Update</a>
     
                             <a href="/remove/{{employee.pk}}">Delete</a>
-                        </td>
+                        </td> -->
                     </tr>
                     {% endfor %}
                 </tbody>
